@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis alertas · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="mi-cuenta.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Mis alertas</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido contenido--medio">
+    <h1 class="titulo-pagina">Mis alertas</h1>
+    <p class="texto-secundario">Te avisamos por mail cuando baje el precio total de estos productos.</p>
+    <p class="alertas__vacio">Todavía no tenés alertas. Tocá la campanita de cualquier producto para crear una.</p>
+    <ul class="alertas">
+      <li class="alerta alerta--oculta" data-producto="campera-nike-therma">
+        <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-therma-400.webp 400w, img/productos/campera-nike-therma-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/campera-nike-therma.jpg" alt="Campera Nike Therma">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Campera Nike Therma</p>
+          <p class="alerta__hoy">Hoy: $103.989 en Sporting</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-campera-nike-therma.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="campera-nike-therma">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="campera-nike-club-lightweight">
+        <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-club-lightweight-400.webp 400w, img/productos/campera-nike-club-lightweight-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/campera-nike-club-lightweight.jpg" alt="Campera Nike Club Lightweight">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Campera Nike Club Lightweight</p>
+          <p class="alerta__hoy">Hoy: $146.989 en Sporting</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-campera-nike-club-lightweight.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="campera-nike-club-lightweight">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="adidas-response-runner-2">
+        <picture>
+            <source type="image/webp" srcset="img/productos/adidas-response-runner-2-400.webp 400w, img/productos/adidas-response-runner-2-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/adidas-response-runner-2.jpg" alt="Adidas Response Runner 2">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Adidas Response Runner 2</p>
+          <p class="alerta__hoy">Hoy: $99.999 en Adidas</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-adidas-response-runner-2.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="adidas-response-runner-2">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="asics-ex89">
+        <picture>
+            <source type="image/webp" srcset="img/productos/asics-ex89-400.webp 400w, img/productos/asics-ex89-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/asics-ex89.jpg" alt="Asics EX89">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Asics EX89</p>
+          <p class="alerta__hoy">Hoy: $132.989 en Sporting</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-asics-ex89.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="asics-ex89">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="remera-adidas-adi365">
+        <picture>
+            <source type="image/webp" srcset="img/productos/remera-adidas-adi365-400.webp 400w, img/productos/remera-adidas-adi365-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/remera-adidas-adi365.jpg" alt="Remera Adidas Adi365 Climacool">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Remera Adidas Adi365 Climacool</p>
+          <p class="alerta__hoy">Hoy: $69.999 en Adidas</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-remera-adidas-adi365.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="remera-adidas-adi365">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="campera-nike-trail-aireez">
+        <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-trail-aireez-400.webp 400w, img/productos/campera-nike-trail-aireez-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/campera-nike-trail-aireez.jpg" alt="Campera Nike Trail Aireez">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Campera Nike Trail Aireez</p>
+          <p class="alerta__hoy">Hoy: $149.999 en Dexter</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-campera-nike-trail-aireez.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="campera-nike-trail-aireez">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="short-nike-club-fleece">
+        <picture>
+            <source type="image/webp" srcset="img/productos/short-nike-club-fleece-400.webp 400w, img/productos/short-nike-club-fleece-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/short-nike-club-fleece.jpg" alt="Short Nike Club Fleece">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Short Nike Club Fleece</p>
+          <p class="alerta__hoy">Hoy: $49.999 en Moov</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-short-nike-club-fleece.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="short-nike-club-fleece">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="pantalon-boca-juniors-adidas">
+        <picture>
+            <source type="image/webp" srcset="img/productos/pantalon-boca-juniors-adidas-400.webp 400w, img/productos/pantalon-boca-juniors-adidas-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/pantalon-boca-juniors-adidas.jpg" alt="Pantalón Boca Juniors Adidas Aniversario">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Pantalón Boca Juniors Adidas Aniversario</p>
+          <p class="alerta__hoy">Hoy: $142.999 en Open Sports</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-pantalon-boca-juniors-adidas.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="pantalon-boca-juniors-adidas">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="remera-puma-cloudspun">
+        <picture>
+            <source type="image/webp" srcset="img/productos/remera-puma-cloudspun-400.webp 400w, img/productos/remera-puma-cloudspun-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/remera-puma-cloudspun.jpg" alt="Remera Puma Run Cloudspun">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Remera Puma Run Cloudspun</p>
+          <p class="alerta__hoy">Hoy: $19.999 en Dexter</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-remera-puma-cloudspun.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="remera-puma-cloudspun">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="puma-smash-3">
+        <picture>
+            <source type="image/webp" srcset="img/productos/puma-smash-3-400.webp 400w, img/productos/puma-smash-3-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/puma-smash-3.jpg" alt="Puma Smash 3.0">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Puma Smash 3.0</p>
+          <p class="alerta__hoy">Hoy: $53.999 en Newsport</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-puma-smash-3.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="puma-smash-3">Quitar</button>
+        </div>
+      </li>
+      <li class="alerta alerta--oculta" data-producto="adidas-duramo-sl">
+        <picture>
+            <source type="image/webp" srcset="img/productos/adidas-duramo-sl-400.webp 400w, img/productos/adidas-duramo-sl-800.webp 800w" sizes="5rem">
+            <img class="alerta__foto" src="img/productos/adidas-duramo-sl.jpg" alt="Adidas Duramo SL">
+          </picture>
+        <div class="alerta__datos">
+          <p class="alerta__estado">Esperando que baje</p>
+          <p class="alerta__nombre">Adidas Duramo SL</p>
+          <p class="alerta__hoy">Hoy: $29.999 en Dexter</p>
+        </div>
+        <div class="alerta__botones">
+          <a href="producto-adidas-duramo-sl.html" class="boton boton--claro">Ver precios</a>
+          <button type="button" class="boton boton--borde" data-alerta="adidas-duramo-sl">Quitar</button>
+        </div>
+      </li>
+    </ul>
+    <a href="resultados.html" class="boton boton--amarillo boton--ancho">Ver productos</a>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/buscar-gris.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/alerta-amarillo.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

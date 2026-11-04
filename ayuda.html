@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="menu.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Ayuda</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido contenido--medio">
+    <h1 class="titulo-pagina">Preguntas frecuentes</h1>
+    <section class="pregunta"><h2 class="pregunta__titulo">¿Cómo comparan los precios?</h2><p class="pregunta__texto">Revisamos los precios de cada tienda varias veces por día y los ordenamos por precio total, con el envío incluido.</p></section>
+    <section class="pregunta"><h2 class="pregunta__titulo">¿PrecioScan vende los productos?</h2><p class="pregunta__texto">No. Te mostramos dónde conviene comprar y te llevamos a la tienda. La compra, el pago y el envío los hace cada tienda.</p></section>
+    <section class="pregunta"><h2 class="pregunta__titulo">¿Cómo funcionan las alertas?</h2><p class="pregunta__texto">Tocá la campanita de cualquier producto: se pone amarilla y queda guardada en Mis alertas. Te avisamos por mail cuando el precio total baje.</p></section>
+    <aside class="caja">
+      <h2 class="seccion__titulo">¿No encontraste tu respuesta?</h2>
+      <p class="texto-secundario">Te respondemos por WhatsApp de lunes a viernes de 9 a 18 h.</p>
+      <a href="https://wa.me/5491100000000" class="boton boton--borde boton--ancho"><img class="boton__icono" src="img/iconos/whatsapp-verde.svg" alt="">Escribinos por WhatsApp</a>
+    </aside>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/buscar-gris.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/mas-amarillo.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>
