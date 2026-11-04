@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__fila"><span class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></span></div>
+    </div>
+  </header>
+
+  <main class="container contenido">
+    <form class="formulario" action="elegir-nombre.html">
+      <h1 class="titulo-pagina">Crear cuenta</h1>
+      <label class="formulario__etiqueta" for="nombre">Nombre</label>
+      <input class="formulario__campo" type="text" id="nombre" required>
+      <label class="formulario__etiqueta" for="email">Email</label>
+      <input class="formulario__campo" type="email" id="email" placeholder="tu@mail.com" required>
+      <label class="formulario__etiqueta" for="clave">Contraseña (mínimo 8 caracteres)</label>
+      <input class="formulario__campo" type="password" id="clave" required>
+      <label class="formulario__check"><input type="checkbox" required> Acepto los <a href="terminos.html">términos y condiciones</a></label>
+      <button type="submit" class="boton boton--amarillo boton--ancho">Crear cuenta</button>
+      <p class="formulario__separador">o</p>
+      <a href="elegir-nombre.html" class="boton boton--borde boton--ancho"><img class="boton__icono" src="img/iconos/google-negro.svg" alt="">Continuar con Google</a>
+      <p class="mt-4">¿Ya tenés cuenta? <a href="login.html" class="formulario__link">Ingresar</a></p>
+    </form>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

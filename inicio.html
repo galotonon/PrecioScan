@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+        <a href="buscar.html" class="buscador">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <span class="buscador__texto">Buscá zapatillas, ropa o marcas</span>
+        </a>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Carrusel -->
+    <section class="seccion">
+      <div id="portada" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#portada" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#portada" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#portada" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="portada">
+              <p class="portada__saludo">Hola, <span class="nombre-usuario">Galo</span></p>
+              <h1 class="portada__titulo">Compará y pagá menos</h1>
+              <p class="portada__texto">El precio total ya incluye el envío.</p>
+              <a href="resultados-ofertas.html" class="boton boton--amarillo">Ver ofertas</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="portada">
+              <p class="portada__saludo">Nuevo</p>
+              <h2 class="portada__titulo">Ropa deportiva</h2>
+              <p class="portada__texto">Remeras, buzos, camperas y shorts.</p>
+              <a href="resultados-ropa.html" class="boton boton--amarillo">Ver ropa</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="portada">
+              <p class="portada__saludo">Running</p>
+              <h2 class="portada__titulo">Zapatillas para correr</h2>
+              <p class="portada__texto">Nike, Adidas y Asics, con el envío incluido.</p>
+              <a href="resultados-running.html" class="boton boton--amarillo">Ver zapatillas</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portada" data-bs-slide="prev">
+          <span class="portada__flecha"><img class="portada__flecha-icono" src="img/iconos/anterior-blanco.svg" alt="Anterior"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portada" data-bs-slide="next">
+          <span class="portada__flecha"><img class="portada__flecha-icono" src="img/iconos/siguiente-blanco.svg" alt="Siguiente"></span>
+        </button>
+      </div>
+    </section>
+
+    <nav class="seccion">
+      <h2 class="seccion__titulo mb-3">Categorías</h2>
+      <ul class="categorias">
+        <li>
+          <a href="resultados-zapatillas.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/zapatillas-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Zapatillas</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-ropa.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/ropa-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Ropa</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-ofertas.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/ofertas-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Ofertas</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-running.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/running-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Running</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-remeras.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/remeras-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Remeras</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-abrigo.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/abrigo-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Abrigo</span>
+          </a>
+        </li>
+        <li>
+          <a href="resultados-pantalones.html" class="categoria">
+            <span class="categoria__circulo"><img class="categoria__icono" src="img/iconos/pantalones-amarillo.svg" alt=""></span>
+            <span class="categoria__nombre">Pantalones</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="seccion">
+      <div class="seccion__encabezado">
+        <h2 class="seccion__titulo">Bajaron de precio</h2>
+        <a href="resultados-ofertas.html" class="seccion__link">Ver todo <img class="seccion__icono" src="img/iconos/ver-todo-negro.svg" alt=""></a>
+      </div>
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-remera-puma-cloudspun.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-72%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/remera-puma-cloudspun-400.webp 400w, img/productos/remera-puma-cloudspun-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/remera-puma-cloudspun.jpg" alt="Remera Puma Run Cloudspun">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Remera Puma Run Cloudspun</p>
+            <p class="tarjeta__antes">$70.999</p>
+            <p class="tarjeta__precio">$19.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="remera-puma-cloudspun"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-adidas-duramo-sl.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-70%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/adidas-duramo-sl-400.webp 400w, img/productos/adidas-duramo-sl-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/adidas-duramo-sl.jpg" alt="Adidas Duramo SL">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Adidas Duramo SL</p>
+            <p class="tarjeta__antes">$99.999</p>
+            <p class="tarjeta__precio">$29.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="adidas-duramo-sl"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-asics-ex89.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-55%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/asics-ex89-400.webp 400w, img/productos/asics-ex89-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/asics-ex89.jpg" alt="Asics EX89">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Asics EX89</p>
+            <p class="tarjeta__antes">$264.900</p>
+            <p class="tarjeta__precio">$132.989</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="asics-ex89"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-short-nike-club-fleece.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-50%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/short-nike-club-fleece-400.webp 400w, img/productos/short-nike-club-fleece-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/short-nike-club-fleece.jpg" alt="Short Nike Club Fleece">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Short Nike Club Fleece</p>
+            <p class="tarjeta__antes">$99.999</p>
+            <p class="tarjeta__precio">$49.999</p>
+            <p class="tarjeta__tienda">en Moov</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="short-nike-club-fleece"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+    </section>
+
+    <section class="seccion">
+      <div class="seccion__encabezado">
+        <h2 class="seccion__titulo">Ropa deportiva</h2>
+        <a href="resultados-ropa.html" class="seccion__link">Ver todo <img class="seccion__icono" src="img/iconos/ver-todo-negro.svg" alt=""></a>
+      </div>
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-campera-nike-therma.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-25%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-therma-400.webp 400w, img/productos/campera-nike-therma-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/campera-nike-therma.jpg" alt="Campera Nike Therma">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Campera Nike Therma</p>
+            <p class="tarjeta__antes">$119.999</p>
+            <p class="tarjeta__precio">$103.989</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="campera-nike-therma"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-campera-nike-club-lightweight.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-30%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-club-lightweight-400.webp 400w, img/productos/campera-nike-club-lightweight-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/campera-nike-club-lightweight.jpg" alt="Campera Nike Club Lightweight">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Campera Nike Club Lightweight</p>
+            <p class="tarjeta__antes">$189.999</p>
+            <p class="tarjeta__precio">$146.989</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="campera-nike-club-lightweight"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-remera-adidas-adi365.html" class="tarjeta__link">
+          
+          <picture>
+            <source type="image/webp" srcset="img/productos/remera-adidas-adi365-400.webp 400w, img/productos/remera-adidas-adi365-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/remera-adidas-adi365.jpg" alt="Remera Adidas Adi365 Climacool">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Remera Adidas Adi365 Climacool</p>
+            
+            <p class="tarjeta__precio">$69.999</p>
+            <p class="tarjeta__tienda">en Adidas</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="remera-adidas-adi365"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-campera-nike-trail-aireez.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-40%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/campera-nike-trail-aireez-400.webp 400w, img/productos/campera-nike-trail-aireez-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/campera-nike-trail-aireez.jpg" alt="Campera Nike Trail Aireez">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Campera Nike Trail Aireez</p>
+            <p class="tarjeta__antes">$249.999</p>
+            <p class="tarjeta__precio">$149.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="campera-nike-trail-aireez"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+    </section>
+
+    <section class="seccion">
+      <div class="seccion__encabezado">
+        <h2 class="seccion__titulo">Zapatillas</h2>
+        <a href="resultados-zapatillas.html" class="seccion__link">Ver todo <img class="seccion__icono" src="img/iconos/ver-todo-negro.svg" alt=""></a>
+      </div>
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-adidas-response-runner-2.html" class="tarjeta__link">
+          
+          <picture>
+            <source type="image/webp" srcset="img/productos/adidas-response-runner-2-400.webp 400w, img/productos/adidas-response-runner-2-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/adidas-response-runner-2.jpg" alt="Adidas Response Runner 2">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Adidas Response Runner 2</p>
+            
+            <p class="tarjeta__precio">$99.999</p>
+            <p class="tarjeta__tienda">en Adidas</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="adidas-response-runner-2"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-asics-ex89.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-55%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/asics-ex89-400.webp 400w, img/productos/asics-ex89-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/asics-ex89.jpg" alt="Asics EX89">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Asics EX89</p>
+            <p class="tarjeta__antes">$264.900</p>
+            <p class="tarjeta__precio">$132.989</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="asics-ex89"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-puma-smash-3.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-40%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/puma-smash-3-400.webp 400w, img/productos/puma-smash-3-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/puma-smash-3.jpg" alt="Puma Smash 3.0">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Puma Smash 3.0</p>
+            <p class="tarjeta__antes">$90.000</p>
+            <p class="tarjeta__precio">$53.999</p>
+            <p class="tarjeta__tienda">en Newsport</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="puma-smash-3"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-adidas-duramo-sl.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-70%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/adidas-duramo-sl-400.webp 400w, img/productos/adidas-duramo-sl-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/adidas-duramo-sl.jpg" alt="Adidas Duramo SL">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Adidas Duramo SL</p>
+            <p class="tarjeta__antes">$99.999</p>
+            <p class="tarjeta__precio">$29.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="adidas-duramo-sl"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+    </section>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/inicio-amarillo.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/buscar-gris.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

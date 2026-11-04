@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puma Velocity Nitro 3 · PrecioScan</title>
+
+  <!-- Tipografías de Google Fonts (Montserrat para títulos y precios, Roboto para el texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap descargado (descarga local) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Vinculamos la hoja de estilos (va después de Bootstrap para poder pisar sus estilos) -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Vinculamos el archivo manifest.json -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Color del tema (complementa el theme_color del manifest) -->
+  <meta name="theme-color" content="#1A1A1A">
+
+  <!-- Ícono principal para navegadores -->
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <!-- Celular: volver, título y usuario -->
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="resultados-zapatillas.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Producto</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <!-- Compu: logo, buscador, menú y usuario en una sola fila -->
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido">
+    <!-- Migas de pan (solo compu) -->
+    <nav class="migas">
+      <ol class="migas__lista">
+        <li><a href="inicio.html" class="migas__link">Inicio</a></li>
+        <li><a href="resultados-zapatillas.html" class="migas__link">Zapatillas</a></li>
+        <li class="migas__actual">Puma Velocity Nitro 3</li>
+      </ol>
+    </nav>
+
+    <!-- CSS Grid con áreas: en celular va todo en una columna, en compu la foto queda a la izquierda -->
+    <article class="producto">
+      <div class="producto__foto">
+          <picture>
+            <source type="image/webp" srcset="img/productos/puma-velocity-nitro-3-400.webp 400w, img/productos/puma-velocity-nitro-3-800.webp 800w" sizes="(min-width: 992px) 50vw, 100vw">
+            <img class="producto__imagen" src="img/productos/puma-velocity-nitro-3.jpg" alt="Puma Velocity Nitro 3">
+          </picture>
+      </div>
+
+      <div class="producto__info">
+        <h1 class="producto__nombre">Puma Velocity Nitro 3</h1>
+        <p class="texto-secundario">Running · Mujer · Puma</p>
+        <p class="producto__etiqueta">Mejor precio total</p>
+        
+        <p class="producto__precio">$135.000</p>
+        <p class="producto__tienda">en Dexter · Envío gratis</p>
+
+        <div class="talles">
+          <p class="talles__titulo">Talle</p>
+          <div class="talles__opciones">
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="38">38</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="39">39</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="40">40</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="41">41</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="42" checked>42</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="43">43</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="44">44</label>
+          <label class="talles__opcion"><input class="talles__input" type="radio" name="talle" value="45">45</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla unificada: precio, envío, total y stock de cada tienda -->
+      <section class="producto__tabla">
+        <h2 class="seccion__titulo">Comparar precios</h2>
+        <p class="texto-secundario">Ordenado por precio total, con el envío incluido. Tocá una tienda para comprar ahí.</p>
+        <table class="tabla-precios">
+          <thead>
+            <tr>
+              <th>Tienda</th>
+              <th>Precio</th>
+              <th>Envío</th>
+              <th>Total</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tabla-precios__fila--mejor">
+              <td><a href="https://www.dexter.com.ar" class="tabla-precios__tienda">Dexter</a></td>
+              <td>$135.000</td>
+              <td>Gratis</td>
+              <td class="tabla-precios__total">$135.000</td>
+              <td class="tabla-precios__stock--hay">Hay</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.moov.com.ar" class="tabla-precios__tienda">Moov</a></td>
+              <td>$139.000</td>
+              <td>Gratis</td>
+              <td class="tabla-precios__total">$139.000</td>
+              <td class="tabla-precios__stock--hay">Hay</td>
+            </tr>
+            <tr class="tabla-precios__fila--sin-stock">
+              <td>Sporting</td>
+              <td>$142.000</td>
+              <td>$3.500</td>
+              <td class="tabla-precios__total">$145.500</td>
+              <td class="tabla-precios__stock--sin">Sin stock</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="producto__acciones">
+        <a href="https://www.dexter.com.ar" class="boton boton--amarillo boton--ancho">Comprar en Dexter</a>
+        <button type="button" class="boton boton--borde boton--ancho" data-alerta="puma-velocity-nitro-3"><img class="boton__icono" src="img/iconos/campana-negro.svg" alt=""><span class="boton__texto">Crear alerta de precio</span></button>
+      </div>
+    </article>
+
+    <section class="seccion">
+      <h2 class="seccion__titulo mb-3">También te puede interesar</h2>
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-nike-pegasus-41.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-24%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/nike-pegasus-41-400.webp 400w, img/productos/nike-pegasus-41-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/nike-pegasus-41.jpg" alt="Nike Pegasus 41">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Nike Pegasus 41</p>
+            <p class="tarjeta__antes">$210.000</p>
+            <p class="tarjeta__precio">$160.000</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <!-- Campanita: crea o quita la alerta sin salir de la página (js/alertas.js) -->
+        <button type="button" class="tarjeta__accion" data-alerta="nike-pegasus-41"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-puma-future-play.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-22%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/puma-future-play-400.webp 400w, img/productos/puma-future-play-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/puma-future-play.jpg" alt="Puma Future Play">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Puma Future Play</p>
+            <p class="tarjeta__antes">$115.000</p>
+            <p class="tarjeta__precio">$90.000</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <!-- Campanita: crea o quita la alerta sin salir de la página (js/alertas.js) -->
+        <button type="button" class="tarjeta__accion" data-alerta="puma-future-play"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-topper-strong-pace-3.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-24%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/topper-strong-pace-3-400.webp 400w, img/productos/topper-strong-pace-3-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/topper-strong-pace-3.jpg" alt="Topper Strong Pace III">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Topper Strong Pace III</p>
+            <p class="tarjeta__antes">$58.000</p>
+            <p class="tarjeta__precio">$44.000</p>
+            <p class="tarjeta__tienda">en Netshoes</p>
+          </div>
+        </a>
+        <!-- Campanita: crea o quita la alerta sin salir de la página (js/alertas.js) -->
+        <button type="button" class="tarjeta__accion" data-alerta="topper-strong-pace-3"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+    </section>
+  </main>
+
+  <!-- Soporte por WhatsApp: botón flotante en todas las pantallas (regla del manual de marca) -->
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <!-- Cartel de confirmación: lo muestra js/alertas.js al tocar una campanita -->
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra de navegación inferior, como en las apps (solo en celular) -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/buscar-amarillo.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Nuestro JavaScript: guarda los datos del usuario y las alertas -->
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Script para registrar el Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

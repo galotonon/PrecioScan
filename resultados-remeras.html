@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remeras · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="inicio.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Remeras</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido">
+    <h1 class="titulo-pagina">Remeras</h1>
+    <p class="texto-secundario">2 resultados · ordenados por menor precio total (con envío)</p>
+
+    <div class="resultados__barra">
+      <button type="button" class="boton boton--negro" data-bs-toggle="modal" data-bs-target="#filtros"><img class="boton__icono" src="img/iconos/filtrar-blanco.svg" alt="">Filtrar</button>
+      <span class="chip chip--activo">Remeras</span>
+    </div>
+
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-remera-puma-cloudspun.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-72%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/remera-puma-cloudspun-400.webp 400w, img/productos/remera-puma-cloudspun-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/remera-puma-cloudspun.jpg" alt="Remera Puma Run Cloudspun">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Remera Puma Run Cloudspun</p>
+            <p class="tarjeta__antes">$70.999</p>
+            <p class="tarjeta__precio">$19.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="remera-puma-cloudspun"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-remera-adidas-adi365.html" class="tarjeta__link">
+          
+          <picture>
+            <source type="image/webp" srcset="img/productos/remera-adidas-adi365-400.webp 400w, img/productos/remera-adidas-adi365-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/remera-adidas-adi365.jpg" alt="Remera Adidas Adi365 Climacool">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Remera Adidas Adi365 Climacool</p>
+            
+            <p class="tarjeta__precio">$69.999</p>
+            <p class="tarjeta__tienda">en Adidas</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="remera-adidas-adi365"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+  </main>
+
+  <!-- Modal de filtros -->
+  <div class="modal fade" id="filtros">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title filtros__titulo">Filtrar por categoría</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="lista-menu">
+            <li><a href="resultados.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/ver-todo-amarillo.svg" alt="">Todos los productos</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-zapatillas.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/zapatillas-amarillo.svg" alt="">Zapatillas</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-ropa.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/ropa-amarillo.svg" alt="">Ropa</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-ofertas.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/ofertas-amarillo.svg" alt="">Ofertas</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-running.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/running-amarillo.svg" alt="">Running</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-remeras.html" class="lista-menu__link lista-menu__link--activo"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/remeras-amarillo.svg" alt="">Remeras</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-abrigo.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/abrigo-amarillo.svg" alt="">Abrigo</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+            <li><a href="resultados-pantalones.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/pantalones-amarillo.svg" alt="">Pantalones</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/buscar-amarillo.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

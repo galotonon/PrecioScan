@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="inicio.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Mi cuenta</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido contenido--medio">
+    <h1 class="titulo-pagina">Mi cuenta</h1>
+    <div class="perfil">
+      <span class="avatar avatar--grande inicial-usuario">G</span>
+      <div>
+        <p class="perfil__nombre">Hola, <span class="nombre-usuario">Galo</span></p>
+        <p class="perfil__email email-usuario">galo@mail.com</p>
+      </div>
+      <a href="elegir-nombre.html" class="perfil__editar"><img class="perfil__icono" src="img/iconos/editar-amarillo.svg" alt="Cambiar mi nombre"></a>
+    </div>
+    <ul class="lista-menu mb-4">
+        <li class="lista-menu__item"><a href="alertas.html" class="lista-menu__link"><span><img class="lista-menu__icono" src="img/iconos/campana-negro.svg" alt="">Mis alertas</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="historial.html" class="lista-menu__link"><span><img class="lista-menu__icono" src="img/iconos/historial-negro.svg" alt="">Historial</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="editar-datos.html" class="lista-menu__link"><span><img class="lista-menu__icono" src="img/iconos/cuenta-negro.svg" alt="">Mis datos</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+    </ul>
+    <a href="index.html" class="boton boton--borde boton--ancho"><img class="boton__icono" src="img/iconos/salir-negro.svg" alt="">Cerrar sesión</a>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/buscar-gris.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link barra-inferior__link--activo"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

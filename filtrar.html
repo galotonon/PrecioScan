@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtrar · PrecioScan</title>
+
+  <!-- Tipografías de Google Fonts (Montserrat para títulos y precios, Roboto para el texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap descargado (descarga local) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Vinculamos la hoja de estilos (va después de Bootstrap para poder pisar sus estilos) -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Vinculamos el archivo manifest.json -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Color del tema (complementa el theme_color del manifest) -->
+  <meta name="theme-color" content="#1A1A1A">
+
+  <!-- Ícono principal para navegadores -->
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="container">
+      <!-- Celular: volver, título y usuario -->
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="resultados.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Filtrar</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar">G</span><span class="usuario__nombre">Galo</span></a>
+        </div>
+      </div>
+      <!-- Compu: logo, buscador, menú y usuario en una sola fila -->
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar">G</span><span class="usuario__nombre">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido contenido--medio">
+    <h1 class="titulo-pagina">Filtrar por categoría</h1>
+    <ul class="lista-menu mb-4">
+        <li class="lista-menu__item"><a href="resultados-zapatillas.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/zapatillas-amarillo.svg" alt="">Zapatillas</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-ropa.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/ropa-amarillo.svg" alt="">Ropa</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-ofertas.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/ofertas-amarillo.svg" alt="">Ofertas</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-running.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/running-amarillo.svg" alt="">Running</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-futbol.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/futbol-amarillo.svg" alt="">Fútbol</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-remeras.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/remeras-amarillo.svg" alt="">Remeras</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-abrigo.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/abrigo-amarillo.svg" alt="">Abrigo</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+        <li class="lista-menu__item"><a href="resultados-pantalones.html" class="lista-menu__link"><span><img class="lista-menu__icono lista-menu__icono--fondo" src="img/iconos/pantalones-amarillo.svg" alt="">Pantalones</span><img class="lista-menu__flecha" src="img/iconos/flecha-negro.svg" alt=""></a></li>
+    </ul>
+    <a href="resultados.html" class="boton boton--amarillo boton--ancho">Ver todos los productos</a>
+  </main>
+
+  <!-- Soporte por WhatsApp: botón flotante en todas las pantallas (regla del manual de marca) -->
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+
+  <!-- Script para registrar el Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>

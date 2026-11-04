@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adidas Response Runner 2 · PrecioScan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+<body class="con-barra">
+  <header class="encabezado">
+    <div class="container">
+      <div class="encabezado__celular">
+        <div class="encabezado__fila">
+          <a href="resultados-zapatillas.html" class="encabezado__volver"><img class="encabezado__icono" src="img/iconos/volver-blanco.svg" alt="Volver"></a>
+          <p class="encabezado__titulo">Producto</p>
+          <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+        </div>
+      </div>
+      <div class="encabezado__fila encabezado__fila--compu">
+        <a href="inicio.html" class="encabezado__logo"><img src="img/logo.png" alt="PrecioScan"></a>
+        <form class="buscador buscador--compu" action="resultados.html">
+          <img class="buscador__icono" src="img/iconos/buscar-texto.svg" alt="">
+          <input class="buscador__campo" type="text" placeholder="Buscá zapatillas, ropa o marcas">
+        </form>
+        <nav>
+          <ul class="encabezado__menu">
+            <li><a class="encabezado__link" href="resultados-zapatillas.html">Zapatillas</a></li>
+            <li><a class="encabezado__link" href="resultados-ropa.html">Ropa</a></li>
+            <li><a class="encabezado__link" href="resultados-ofertas.html">Ofertas</a></li>
+            <li><a class="encabezado__link" href="alertas.html">Mis alertas</a></li>
+          </ul>
+        </nav>
+        <a href="mi-cuenta.html" class="usuario"><span class="usuario__avatar inicial-usuario">G</span><span class="usuario__nombre nombre-usuario">Galo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contenido">
+    <nav class="migas">
+      <ol class="migas__lista">
+        <li><a href="inicio.html" class="migas__link">Inicio</a></li>
+        <li><a href="resultados-zapatillas.html" class="migas__link">Zapatillas</a></li>
+        <li class="migas__actual">Adidas Response Runner 2</li>
+      </ol>
+    </nav>
+
+    <article class="producto">
+      <div class="producto__foto">
+          <picture>
+            <source type="image/webp" srcset="img/productos/adidas-response-runner-2-400.webp 400w, img/productos/adidas-response-runner-2-800.webp 800w" sizes="(min-width: 992px) 50vw, 100vw">
+            <img class="producto__imagen" src="img/productos/adidas-response-runner-2.jpg" alt="Adidas Response Runner 2">
+          </picture>
+      </div>
+
+      <div class="producto__info">
+        <h1 class="producto__nombre">Adidas Response Runner 2</h1>
+        <p class="texto-secundario">Running · Unisex · Adidas</p>
+        <p class="producto__etiqueta">Mejor precio total</p>
+        
+        <p class="producto__precio">$99.999</p>
+        <p class="producto__tienda">en Adidas · Envío a calcular</p>
+        <p class="texto-secundario">Los talles disponibles los ves en la web de cada tienda.</p>
+      </div>
+
+      <!-- Comparación de precios -->
+      <section class="producto__tabla">
+        <h2 class="seccion__titulo">Comparar precios</h2>
+        <p class="texto-secundario">Ordenado por precio total, con el envío incluido. Tocá una tienda para comprar ahí.</p>
+        <table class="tabla-precios">
+          <thead>
+            <tr>
+              <th>Tienda</th>
+              <th>Precio</th>
+              <th>Envío</th>
+              <th>Total</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tabla-precios__fila--mejor">
+              <td><a href="https://www.adidas.com.ar/zapatillas-response-runner-2/KJ1736.html" class="tabla-precios__tienda">Adidas</a></td>
+              <td>$99.999</td>
+              <td>A calcular</td>
+              <td class="tabla-precios__total">$99.999</td>
+              <td class="tabla-precios__stock--hay">Hay</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.sporting.com.ar/zapatillas-adidas-response-runner-2-unisex-6kj1736-000/p" class="tabla-precios__tienda">Sporting</a></td>
+              <td>$99.999</td>
+              <td>$12.900</td>
+              <td class="tabla-precios__total">$112.899</td>
+              <td class="tabla-precios__stock--hay">Hay</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="producto__acciones">
+        <a href="https://www.adidas.com.ar/zapatillas-response-runner-2/KJ1736.html" class="boton boton--amarillo boton--ancho">Comprar en Adidas</a>
+        <button type="button" class="boton boton--borde boton--ancho" data-alerta="adidas-response-runner-2"><img class="boton__icono" src="img/iconos/campana-negro.svg" alt=""><span class="boton__texto">Crear alerta de precio</span></button>
+      </div>
+    </article>
+
+    <section class="seccion">
+      <h2 class="seccion__titulo mb-3">También te puede interesar</h2>
+    <ul class="grilla">
+      <li class="tarjeta">
+        <a href="producto-asics-ex89.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-55%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/asics-ex89-400.webp 400w, img/productos/asics-ex89-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/asics-ex89.jpg" alt="Asics EX89">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Asics EX89</p>
+            <p class="tarjeta__antes">$264.900</p>
+            <p class="tarjeta__precio">$132.989</p>
+            <p class="tarjeta__tienda">en Sporting</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="asics-ex89"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-puma-smash-3.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-40%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/puma-smash-3-400.webp 400w, img/productos/puma-smash-3-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/puma-smash-3.jpg" alt="Puma Smash 3.0">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Puma Smash 3.0</p>
+            <p class="tarjeta__antes">$90.000</p>
+            <p class="tarjeta__precio">$53.999</p>
+            <p class="tarjeta__tienda">en Newsport</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="puma-smash-3"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+      <li class="tarjeta">
+        <a href="producto-adidas-duramo-sl.html" class="tarjeta__link">
+          <span class="tarjeta__etiqueta">-70%</span>
+          <picture>
+            <source type="image/webp" srcset="img/productos/adidas-duramo-sl-400.webp 400w, img/productos/adidas-duramo-sl-800.webp 800w" sizes="(min-width: 992px) 25vw, 50vw">
+            <img class="tarjeta__foto" src="img/productos/adidas-duramo-sl.jpg" alt="Adidas Duramo SL">
+          </picture>
+          <div class="tarjeta__cuerpo">
+            <p class="tarjeta__nombre">Adidas Duramo SL</p>
+            <p class="tarjeta__antes">$99.999</p>
+            <p class="tarjeta__precio">$29.999</p>
+            <p class="tarjeta__tienda">en Dexter</p>
+          </div>
+        </a>
+        <button type="button" class="tarjeta__accion" data-alerta="adidas-duramo-sl"><img class="tarjeta__accion-icono" src="img/iconos/campana-chica-negro.svg" alt="Crear alerta de precio"></button>
+      </li>
+    </ul>
+    </section>
+  </main>
+
+  <a href="https://wa.me/5491100000000" class="whatsapp"><img class="whatsapp__icono" src="img/iconos/whatsapp-blanco.svg" alt="Soporte por WhatsApp"></a>
+  <p class="aviso aviso--oculto"></p>
+  <!-- Barra inferior -->
+  <nav class="barra-inferior">
+    <ul class="barra-inferior__lista">
+      <li class="barra-inferior__item"><a href="inicio.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/inicio-gris.svg" alt=""><span>Inicio</span></a></li>
+      <li class="barra-inferior__item"><a href="buscar.html" class="barra-inferior__link barra-inferior__link--activo"><img class="barra-inferior__icono" src="img/iconos/buscar-amarillo.svg" alt=""><span>Buscar</span></a></li>
+      <li class="barra-inferior__item"><a href="alertas.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/alerta-gris.svg" alt=""><span>Alertas</span></a></li>
+      <li class="barra-inferior__item"><a href="mi-cuenta.html" class="barra-inferior__link"><span class="barra-inferior__avatar inicial-usuario">G</span><span class="nombre-usuario">Galo</span></a></li>
+      <li class="barra-inferior__item"><a href="menu.html" class="barra-inferior__link"><img class="barra-inferior__icono" src="img/iconos/mas-gris.svg" alt=""><span>Menú</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/usuario.js"></script>
+  <script src="js/alertas.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Verifica si el navegador soporta Service Workers
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado correctamente'))
+        .catch(err => console.log('❌ Error al registrar el SW:', err));
+    }
+  </script>
+</body>
+</html>
